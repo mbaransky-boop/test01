@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.header h1 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 2.2em;
+}
+
+.header p {
+    color: #666;
+    font-size: 1.1em;
+    margin-bottom: 40px;
+}
+
+.rating-section {
+    margin: 40px 0;
+}
+
+.rating-scale {
+    margin-bottom: 30px;
+}
+
+.rating-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.rating-btn {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ddd;
+    background: white;
+    border-radius: 50%;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #666;
+}
+
+.rating-btn:hover {
+    border-color: #667eea;
+    background: #f0f4ff;
+    transform: scale(1.1);
+}
+
+.rating-btn.selected {
+    background: #667eea;
+    border-color: #667eea;
+    color: white;
+    transform: scale(1.15);
+}
+
+.rating-btn.low-rating.selected {
+    background: #e74c3c;
+    border-color: #e74c3c;
+}
+
+.rating-btn.high-rating.selected {
+    background: #27ae60;
+    border-color: #27ae60;
+}
+
+.rating-labels {
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.selected-rating {
+    margin: 30px 0;
+}
+
+#rating-text {
+    font-size: 1.3em;
+    color: #333;
+    font-weight: bold;
+}
+
+.submit-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.submit-btn:hover:not(:disabled) {
+    background: #5a6fd8;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.submit-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.footer {
+    margin-top: 40px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Contact page styles */
+.contact-section {
+    text-align: left;
+}
+
+.apology-message {
+    background: #ffeaa7;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.apology-message h2 {
+    color: #d63031;
+    margin-bottom: 15px;
+}
+
+.promise {
+    background: #00b894;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.contact-form {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.contact-info {
+    background: #e8f4fd;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contact-details {
+    margin: 15px 0;
+}
+
+.contact-details p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.contact-note {
+    background: #00b894;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.back-link {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Success/Thank you page */
+.success-message {
+    background: #d4edda;
+    color: #155724;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.success-message h2 {
+    margin-bottom: 15px;
+}
+
+.external-links {
+    margin: 30px 0;
+}
+
+.external-link {
+    display: inline-block;
+    background: #667eea;
+    color: white;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.external-link:hover {
+    background: #5a6fd8;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.google-link {
+    background: #4285f4;
+}
+
+.tripadvisor-link {
+    background: #00af87;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    .header h1 {
+        font-size: 1.8em;
+    }
+    
+    .rating-buttons {
+        gap: 5px;
+    }
+    
+    .rating-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1em;
+    }
+    
+    .contact-form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rating-buttons {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+    }
+    
+    .rating-btn {
+        width: 100%;
+        height: 45px;
+    }
+}

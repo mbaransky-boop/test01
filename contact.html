@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skontaktuj się z nami</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>😔 Przepraszamy!</h1>
+            <p>Nie spełniliśmy Twoich oczekiwań</p>
+        </div>
+
+        <div class="contact-section">
+            <div class="apology-message">
+                <h2>Bardzo nas to martwi!</h2>
+                <p>Twoje zadowolenie jest naszym priorytetem. Opowiedz nam, co poszło nie tak, a my zadbamy o to, aby naprawić sytuację.</p>
+                <div class="promise">
+                    <p><strong>🎁 Obiecujemy rekompensatę za złe wrażenia!</strong></p>
+                </div>
+            </div>
+
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Twoje imię:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email (opcjonalnie):</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Telefon (opcjonalnie):</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="problem">Opisz, co poszło nie tak:</label>
+                    <textarea id="problem" name="problem" rows="5" required placeholder="Opowiedz nam szczegółowo o swoich wrażeniach..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Wyślij wiadomość</button>
+            </form>
+
+            <div class="contact-info">
+                <h3>Bezpośredni kontakt:</h3>
+                <div class="contact-details">
+                    <p>📞 <strong>Manager:</strong> +48 123 456 789</p>
+                    <p>📧 <strong>Email:</strong> manager@restauracja.pl</p>
+                    <p>💬 <strong>WhatsApp:</strong> +48 123 456 789</p>
+                </div>
+                <p class="contact-note">Odpowiemy w ciągu 2 godzin!</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Dziękujemy za szczerość i dajemy Ci szansę na lepsze wrażenia!</p>
+            <a href="index.html" class="back-link">← Powrót do ocen</a>
+        </div>
+    </div>
+
+    <script src="contact.js"></script>
+</body>
+</html>

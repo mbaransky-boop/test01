@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oceń naszą usługę</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🍽️ Jak oceniasz naszą usługę?</h1>
+            <p>Twoja opinia jest dla nas bardzo ważna!</p>
+        </div>
+
+        <div class="rating-section">
+            <div class="rating-scale">
+                <div class="rating-buttons">
+                    <button class="rating-btn" data-rating="1">1</button>
+                    <button class="rating-btn" data-rating="2">2</button>
+                    <button class="rating-btn" data-rating="3">3</button>
+                    <button class="rating-btn" data-rating="4">4</button>
+                    <button class="rating-btn" data-rating="5">5</button>
+                    <button class="rating-btn" data-rating="6">6</button>
+                    <button class="rating-btn" data-rating="7">7</button>
+                    <button class="rating-btn" data-rating="8">8</button>
+                    <button class="rating-btn" data-rating="9">9</button>
+                    <button class="rating-btn" data-rating="10">10</button>
+                </div>
+                <div class="rating-labels">
+                    <span>Bardzo źle</span>
+                    <span>Doskonale</span>
+                </div>
+            </div>
+
+            <div class="selected-rating">
+                <p id="rating-text">Wybierz ocenę od 1 do 10</p>
+            </div>
+
+            <button id="submit-rating" class="submit-btn" disabled>Prześlij ocenę</button>
+        </div>
+
+        <div class="footer">
+            <p>Dziękujemy za wizytę w naszej restauracji!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
