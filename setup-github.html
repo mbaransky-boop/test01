@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Setup - Restaurant Rating System</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        h1 { color: #333; text-align: center; margin-bottom: 30px; }
+        .step {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #667eea;
+        }
+        .step h3 {
+            color: #667eea;
+            margin-top: 0;
+        }
+        .highlight {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        .success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .button {
+            background: #667eea;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 5px;
+            transition: all 0.3s ease;
+        }
+        .button:hover {
+            background: #5a6fd8;
+            transform: translateY(-2px);
+        }
+        .terminal {
+            background: #1e1e1e;
+            color: #00ff00;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        .done { opacity: 0.7; background: #e8f5e8; }
+        .countdown {
+            font-size: 1.5em;
+            color: #667eea;
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 GitHub Setup - Restaurant Rating System</h1>
+        
+        <div class="success">
+            <h3>✅ GOTOWE - Kod jest przygotowany lokalnie!</h3>
+            <p>Wszystkie pliki aplikacji są już skonfigurowane i gotowe do wysłania na GitHub.</p>
+        </div>
+
+        <div class="step done">
+            <h3>✅ KROK 1: Przygotowanie kodu (ZROBIONE)</h3>
+            <p>Aplikacja została utworzona i skonfigurowana:</p>
+            <ul>
+                <li>✅ 13 plików aplikacji gotowych</li>
+                <li>✅ Git repository zainicjalizowane</li>
+                <li>✅ Commit utworzony</li>
+                <li>✅ Konfiguracja dla użytkownika: <strong>michalbaranski</strong></li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h3>🔥 KROK 2: Utwórz GitHub Repository</h3>
+            <p><strong>Kliknij przycisk poniżej aby otworzyć GitHub:</strong></p>
+            <a href="https://github.com/new" target="_blank" class="button">🌐 Otwórz GitHub - Nowe Repo</a>
+            
+            <div class="highlight">
+                <p><strong>Na stronie GitHub wypełnij:</strong></p>
+                <ul>
+                    <li><strong>Repository name:</strong> <code>restaurant-rating-system</code></li>
+                    <li><strong>Description:</strong> <code>System ocen restauracji z QR kodami</code></li>
+                    <li><strong>✅ Public</strong> (zostaw zaznaczone)</li>
+                    <li><strong>❌ NIE</strong> dodawaj README.md</li>
+                    <li><strong>❌ NIE</strong> dodawaj .gitignore</li>
+                </ul>
+                <p><strong>Potem kliknij "Create repository"</strong></p>
+            </div>
+        </div>
+
+        <div class="step">
+            <h3>📤 KROK 3: Wyślij kod na GitHub</h3>
+            <p>Po utworzeniu repo, skopiuj i wklej te komendy w Terminal:</p>
+            
+            <div class="terminal">
+cd "/Users/michalbaranski/PANORAMA VS STUDIO CODE"<br>
+git remote add origin https://github.com/michalbaranski/restaurant-rating-system.git<br>
+git branch -M main<br>
+git push -u origin main
+            </div>
+            
+            <p><button onclick="copyToClipboard()" class="button">📋 Skopiuj komendy</button></p>
+        </div>
+
+        <div class="step">
+            <h3>🌐 KROK 4: Włącz GitHub Pages</h3>
+            <p>Po wysłaniu kodu:</p>
+            <ol>
+                <li>Idź na: <a href="https://github.com/michalbaranski/restaurant-rating-system/settings/pages" target="_blank">GitHub Pages Settings</a></li>
+                <li><strong>Source:</strong> "Deploy from a branch"</li>
+                <li><strong>Branch:</strong> "main"</li>
+                <li><strong>Folder:</strong> "/ (root)"</li>
+                <li><strong>Kliknij "Save"</strong></li>
+            </ol>
+        </div>
+
+        <div class="success">
+            <h3>🎉 WYNIK</h3>
+            <p><strong>Za 2-5 minut aplikacja będzie dostępna na:</strong></p>
+            <div class="countdown">
+                <code>https://michalbaranski.github.io/restaurant-rating-system/</code>
+            </div>
+            <p>Ten link możesz zamienic na QR kod i wydrukować na stolikach!</p>
+        </div>
+
+        <div class="step">
+            <h3>📱 BONUS: Generator QR Code</h3>
+            <a href="https://qr-code-generator.com/" target="_blank" class="button">📱 Utwórz QR Code</a>
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard() {
+            const text = `cd "/Users/michalbaranski/PANORAMA VS STUDIO CODE"
+git remote add origin https://github.com/michalbaranski/restaurant-rating-system.git
+git branch -M main
+git push -u origin main`;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                alert('📋 Komendy skopiowane! Wklej je w Terminal.');
+            }).catch(() => {
+                prompt('Skopiuj te komendy:', text);
+            });
+        }
+
+        // Auto-open GitHub after 3 seconds
+        setTimeout(() => {
+            if (confirm('🚀 Otworzyć GitHub aby utworzyć repozytorium?')) {
+                window.open('https://github.com/new', '_blank');
+            }
+        }, 3000);
+    </script>
+</body>
+</html>
