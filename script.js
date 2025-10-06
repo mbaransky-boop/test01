@@ -59,28 +59,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateRatingText(rating) {
         const messages = {
-            1: 'Bardzo niezadowalająco (1/10)',
-            2: 'Niezadowalająco (2/10)',
-            3: 'Poniżej oczekiwań (3/10)',
-            4: 'Niewystarczająco (4/10)',
-            5: 'Przeciętnie (5/10)',
-            6: 'Zadowalająco (6/10)',
-            7: 'Dobrze (7/10)',
-            8: 'Bardzo dobrze (8/10)',
-            9: 'Znakomicie (9/10)',
-            10: 'Doskonale (10/10)'
+            1: 'Znacznie poniżej standardów (1/10)',
+            2: 'Wymaga natychmiastowej poprawy (2/10)',
+            3: 'Daleko od oczekiwań (3/10)',
+            4: 'Niewystarczający poziom (4/10)',
+            5: 'Przeciętne doświadczenie (5/10)',
+            6: 'Satysfakcjonujące (6/10)',
+            7: 'Solidne wykonanie (7/10)',
+            8: 'Wysokiej jakości usługa (8/10)',
+            9: 'Wyjątkowe doświadczenie (9/10)',
+            10: 'Absolutna perfekcja (10/10)'
         };
         
-        ratingText.textContent = messages[rating] || 'Wybierz swoją ocenę';
+        ratingText.textContent = messages[rating] || 'Wybierz poziom satysfakcji';
         
-        // Dodaj animację
+        // Premium animation
         ratingText.style.opacity = '0';
-        ratingText.style.transform = 'translateY(10px)';
+        ratingText.style.transform = 'translateY(15px) scale(0.95)';
         
         setTimeout(() => {
-            ratingText.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+            ratingText.style.transition = 'all 0.5s cubic-bezier(0.23, 1, 0.320, 1)';
             ratingText.style.opacity = '1';
-            ratingText.style.transform = 'translateY(0)';
+            ratingText.style.transform = 'translateY(0) scale(1)';
         }, 100);
     }
 
@@ -100,18 +100,18 @@ document.addEventListener('DOMContentLoaded', function() {
         modal.className = 'modal-overlay';
         modal.innerHTML = `
             <div class="modal-content">
-                <h2>Dziękujemy za Wysoką Ocenę!</h2>
-                <p>Twoja pozytywna opinia bardzo nas cieszy. Podziel się swoimi wrażeniami z innymi:</p>
+                <h2>✦ Dziękujemy za Wyjątkową Ocenę ✦</h2>
+                <p>Twoja wysoka satysfakcja to nasza największa nagroda. Podziel się swoimi wrażeniami z innymi miłośnikami wyjątkowych doświadczeń:</p>
                 <div class="external-links">
                     <a href="${config.googleReviewUrl}" target="_blank" class="external-link google-link">
-                        📍 Oceń na Google
+                        ⭐ Oceń na Google
                     </a>
                     <a href="${config.tripadvisorUrl}" target="_blank" class="external-link tripadvisor-link">
-                        ✈️ Oceń na TripAdvisor
+                        🌟 Oceń na TripAdvisor
                     </a>
                 </div>
-                <p style="margin-top: 20px; font-size: 0.9em; color: var(--text-muted);">
-                    Możesz zamknąć to okno i cieszyć się resztą wieczoru
+                <p style="margin-top: 24px; font-size: 0.9em; color: var(--text-muted); font-style: italic;">
+                    Ciesz się resztą wieczoru w naszym towarzystwie
                 </p>
                 <button onclick="closeModal()" class="close-btn">Zamknij</button>
             </div>
