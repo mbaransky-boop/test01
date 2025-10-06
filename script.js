@@ -59,19 +59,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateRatingText(rating) {
         const messages = {
-            1: 'Bardzo źle (1/10) 😞',
-            2: 'Źle (2/10) 😔',
-            3: 'Słabo (3/10) 😕',
-            4: 'Poniżej oczekiwań (4/10) 😐',
-            5: 'Średnio (5/10) 😐',
-            6: 'Niezłe (6/10) 🙂',
-            7: 'Dobrze (7/10) 😊',
-            8: 'Bardzo dobrze (8/10) 😄',
-            9: 'Doskonale (9/10) 🤩',
-            10: 'Perfekcyjnie (10/10) 🌟'
+            1: 'Bardzo niezadowalająco (1/10)',
+            2: 'Niezadowalająco (2/10)',
+            3: 'Poniżej oczekiwań (3/10)',
+            4: 'Niewystarczająco (4/10)',
+            5: 'Przeciętnie (5/10)',
+            6: 'Zadowalająco (6/10)',
+            7: 'Dobrze (7/10)',
+            8: 'Bardzo dobrze (8/10)',
+            9: 'Znakomicie (9/10)',
+            10: 'Doskonale (10/10)'
         };
         
-        ratingText.textContent = messages[rating] || 'Wybierz ocenę od 1 do 10';
+        ratingText.textContent = messages[rating] || 'Wybierz swoją ocenę';
+        
+        // Dodaj animację
+        ratingText.style.opacity = '0';
+        ratingText.style.transform = 'translateY(10px)';
+        
+        setTimeout(() => {
+            ratingText.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+            ratingText.style.opacity = '1';
+            ratingText.style.transform = 'translateY(0)';
+        }, 100);
     }
 
     function redirectToExternalReview() {
@@ -90,18 +100,18 @@ document.addEventListener('DOMContentLoaded', function() {
         modal.className = 'modal-overlay';
         modal.innerHTML = `
             <div class="modal-content">
-                <h2>🌟 Dziękujemy za wysoką ocenę!</h2>
-                <p>Pomóż innym poznać naszą restaurację - zostaw opinię na:</p>
+                <h2>Dziękujemy za Wysoką Ocenę!</h2>
+                <p>Twoja pozytywna opinia bardzo nas cieszy. Podziel się swoimi wrażeniami z innymi:</p>
                 <div class="external-links">
                     <a href="${config.googleReviewUrl}" target="_blank" class="external-link google-link">
-                        📍 Google Maps
+                        📍 Oceń na Google
                     </a>
                     <a href="${config.tripadvisorUrl}" target="_blank" class="external-link tripadvisor-link">
-                        ✈️ TripAdvisor
+                        ✈️ Oceń na TripAdvisor
                     </a>
                 </div>
-                <p style="margin-top: 20px; font-size: 0.9em; color: #666;">
-                    Możesz też zamknąć to okno i wrócić do restauracji 😊
+                <p style="margin-top: 20px; font-size: 0.9em; color: var(--text-muted);">
+                    Możesz zamknąć to okno i cieszyć się resztą wieczoru
                 </p>
                 <button onclick="closeModal()" class="close-btn">Zamknij</button>
             </div>
@@ -116,7 +126,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background: rgba(0, 0, 0, 0.8);
+                background: rgba(0, 0, 0, 0.85);
+                backdrop-filter: blur(8px);
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -125,23 +136,41 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             .modal-content {
-                background: white;
-                padding: 40px;
+                background: var(--surface-dark);
+                border: 1px solid var(--border-subtle);
+                padding: 48px;
                 border-radius: 20px;
                 text-align: center;
-                max-width: 500px;
+                max-width: 520px;
                 margin: 20px;
                 animation: slideIn 0.3s ease;
+                color: var(--text-light);
+                box-shadow: 0 32px 64px rgba(0, 0, 0, 0.5);
+            }
+            
+            .modal-content h2 {
+                color: var(--primary-gold);
+                font-family: 'Playfair Display', serif;
+                font-size: 1.75rem;
+                margin-bottom: 20px;
             }
             
             .close-btn {
-                background: #6c757d;
-                color: white;
-                border: none;
-                padding: 10px 20px;
-                border-radius: 5px;
+                background: var(--surface-elevated);
+                color: var(--text-light);
+                border: 1px solid var(--border-subtle);
+                padding: 12px 24px;
+                border-radius: 12px;
                 cursor: pointer;
-                margin-top: 20px;
+                margin-top: 24px;
+                font-weight: 500;
+                transition: all 0.3s ease;
+            }
+            
+            .close-btn:hover {
+                background: var(--primary-gold);
+                color: var(--primary-dark);
+                border-color: var(--primary-gold);
             }
             
             @keyframes fadeIn {
@@ -150,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             @keyframes slideIn {
-                from { transform: translateY(-50px); opacity: 0; }
+                from { transform: translateY(-30px); opacity: 0; }
                 to { transform: translateY(0); opacity: 1; }
             }
         `;

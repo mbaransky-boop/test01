@@ -9,39 +9,41 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>🍽️ Jak oceniasz naszą usługę?</h1>
-            <p>Twoja opinia jest dla nas bardzo ważna!</p>
+            <h1>Oceń Swoje Doświadczenie</h1>
+            <p>Twoja opinia pomaga nam doskonalić nasze usługi</p>
         </div>
 
         <div class="rating-section">
             <div class="rating-scale">
                 <div class="rating-buttons">
-                    <button class="rating-btn" data-rating="1">1</button>
-                    <button class="rating-btn" data-rating="2">2</button>
-                    <button class="rating-btn" data-rating="3">3</button>
-                    <button class="rating-btn" data-rating="4">4</button>
-                    <button class="rating-btn" data-rating="5">5</button>
-                    <button class="rating-btn" data-rating="6">6</button>
-                    <button class="rating-btn" data-rating="7">7</button>
-                    <button class="rating-btn" data-rating="8">8</button>
-                    <button class="rating-btn" data-rating="9">9</button>
-                    <button class="rating-btn" data-rating="10">10</button>
+                    <button class="rating-btn" data-rating="1" aria-label="Ocena 1">1</button>
+                    <button class="rating-btn" data-rating="2" aria-label="Ocena 2">2</button>
+                    <button class="rating-btn" data-rating="3" aria-label="Ocena 3">3</button>
+                    <button class="rating-btn" data-rating="4" aria-label="Ocena 4">4</button>
+                    <button class="rating-btn" data-rating="5" aria-label="Ocena 5">5</button>
+                    <button class="rating-btn" data-rating="6" aria-label="Ocena 6">6</button>
+                    <button class="rating-btn" data-rating="7" aria-label="Ocena 7">7</button>
+                    <button class="rating-btn" data-rating="8" aria-label="Ocena 8">8</button>
+                    <button class="rating-btn" data-rating="9" aria-label="Ocena 9">9</button>
+                    <button class="rating-btn" data-rating="10" aria-label="Ocena 10">10</button>
                 </div>
                 <div class="rating-labels">
-                    <span>Bardzo źle</span>
+                    <span>Niewystarczająco</span>
                     <span>Doskonale</span>
                 </div>
             </div>
 
             <div class="selected-rating">
-                <p id="rating-text">Wybierz ocenę od 1 do 10</p>
+                <p id="rating-text">Wybierz swoją ocenę</p>
             </div>
 
-            <button id="submit-rating" class="submit-btn" disabled>Prześlij ocenę</button>
+            <button id="submit-rating" class="submit-btn" disabled aria-label="Prześlij ocenę">
+                Prześlij Ocenę
+            </button>
         </div>
 
         <div class="footer">
-            <p>Dziękujemy za wizytę w naszej restauracji!</p>
+            <p>Dziękujemy za zaufanie i wybór naszej restauracji</p>
         </div>
     </div>
 
